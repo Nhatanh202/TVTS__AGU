@@ -1,0 +1,662 @@
+    header .menu-toggle {
+        display: none;
+        cursor: pointer;}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+    }
+    body, html {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../background1.png');
+        background-position: center;
+        background-size: cover;
+        min-height: 900px;
+        width: 100%;
+        position: relative;
+        bottom: 30%;
+    }
+    .banner__left p {
+        font-size: 40px;
+        color: #707070;
+        font-weight: 600;
+        width: -90%;
+        margin-bottom: 20px;
+    }
+    .banner__left h1 {
+        font-size: 44px;
+        color: #C50202;
+        font-weight: 600;
+        width: -90%;
+        margin: 0;
+        margin-bottom: 15px;
+
+    }
+    .banner__left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        position: absolute;
+        top: 10%;
+        right: 45%;
+        min-height: 100%;
+        font-weight: 300;
+        font-size: 30px;
+    }
+    .banner__right{
+        position: absolute;
+        width: 40%;
+        right: 15%;
+        float: right;
+        bottom: 12%;
+        transform: scale(0.7); /* Thu nhỏ còn 70% */
+        transform-origin: right bottom; /* Thu nhỏ từ góc phải dưới */
+        z-index: 1;
+    }
+    .banner .banner__left .btn-banner-thts{
+        font-size: 18px;
+        color: #707070;
+        font-weight: 300;
+        background-color: transparent;
+        border: 1px solid #707070;
+        padding: 13px 45px;
+        border-radius: 30px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .banner .banner__left .btn-banner-mn{
+        font-size: 30px;
+        color: #C50202;
+        font-weight: 300;
+        background-color: transparent;
+        border: 1px solid #C50202;
+        padding: 10px 40px;
+        border-radius: 30px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    /* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    z-index: 1000; /* Ensure header stays above other content */
+}
+/* No scroll for body when drawer is active */
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.header .logo {
+    width: 30%;
+}
+
+.header .logo img {
+    width: 60%;
+    height: auto;
+    display: block;
+}
+.header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .menu li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.header .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.about {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    justify-content: center;
+    padding: 100px 0;
+}
+.about .left {
+    width: 15%;
+    position: relative;
+    margin-right: 30%;
+    margin-left: 10%;
+}
+.about .left img {
+    z-index: 2; /* Đảm bảo ảnh minh họa nằm trên */
+    width:45%;
+    height: auto;
+    top: 15%;
+    position: absolute;
+    left: 24%;
+}
+.about .left{
+    position: absolute;
+    left: 30%;
+    top: 100%;
+    width: 70%; /* Đảm bảo có kích thước */
+    height: 100%; /* Thêm chiều cao */
+    background: url("/CNTT/background2.png") no-repeat center;
+    margin-right: 20%;
+}
+.about .right p {
+    font-size: 20px;
+    color: grey;
+    text-align: left;
+    max-width: 560px;
+    margin-right: -50%;
+    margin-left: -60%;
+    
+}
+.about .right h2 {
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 5%;
+    color: #C50202;
+    margin-left: -60%;
+    bottom: 10%;
+}
+.training {
+    position: relative;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    margin-top: 20%;
+}
+.training .container {
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 10%;
+}
+.training .right {
+    display: flex;
+    right: -58%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start; /* Căn nội dung về bên trái */
+    gap: 30px;
+}
+.training .text h2 {
+    color: #C50202;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.training .text ul {
+    list-style: none;
+    padding: 0;
+}
+.training .text ul li {
+    display: flex;
+    color: grey;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 19px;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 10% 0 2% ;
+    position: relative;
+    margin-right: 50%;
+}
+.training .text ul li::before {
+    content: "";
+    position: absolute;
+    align-items: start;
+    left: 0;
+    top: 20%;
+    /* transform: translateY(-50%); */
+    width: 20px;
+    height: 20px;
+    background-color: #C50202; /* Màu xanh */
+    border-radius: 20%; /* Làm tròn */
+}
+.training .right .btn__ctdt {
+    font-size: 18px;
+    color: #444444;
+    font-weight: 300;
+    background-color: transparent;
+    border: 1px solid #707070;
+    padding: 13px 45px;
+    border-radius: 30px;
+
+}
+.training .left img {
+    z-index: 2; /* Đảm bảo ảnh minh họa nằm trên */
+    width: 60%;
+    height: auto;
+    top: 15%;
+    position: absolute;
+    left: 15%;
+}
+.training .left{
+    position: absolute;
+    left: -13%;
+    top: -8%;
+    width: 75%; /* Đảm bảo có kích thước */
+    height: 110%; /* Thêm chiều cao */
+    background: url("/CNTT/background3.png") no-repeat center;
+    z-index: -1;
+    transform: scale(0.8);
+}
+.contact .container{
+    position: relative; /* Đổi từ absolute -> relative */
+    display: flex;
+    align-items: center;
+    margin: 10%;
+    justify-content: center;
+    height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    padding: 50px 0; /* Có thể chỉnh lại nếu muốn có khoảng cách */
+}
+.contact .background {
+    z-index: 1;
+    position: absolute;
+    background: url("/CNTT/background6.png") center/cover no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1404px;
+    height: 737px;
+    aspect-ratio: 21/9; /* Nếu ảnh có tỉ lệ 16:9 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.contact .background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 90%;
+    /* Gradient màu tím-xanh */
+    background: linear-gradient(135deg, #CF06DE,  #AF0036);
+    /* Đè lên ảnh nền */
+    z-index: 1;
+}
+.contact .content {
+    padding: 5%;
+    position: relative; /* Added to enforce z-index stacking */
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Xếp dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    color: white; /* Màu chữ */
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    gap: 10px; /* Khoảng cách giữa icon và chữ */
+}
+/* Form chính */
+.contact .form-container {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Tiêu đề */
+.contact .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input container */
+.contact .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.contact .input-box {
+    position: relative;
+    width: calc(50% - 10px);
+}
+
+/* Ô nhập */
+.contact .input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.contact .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+.contact .input-field:focus {
+    border-color: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Textarea */
+.contact .textarea-box {
+    width: 100%;
+}
+
+.contact .textarea-box textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+/* Nút gửi */
+.contact .submit-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.opportunity .container {
+    display: flex;
+    max-width: 100%;
+    padding: 5%;
+    background: white;
+    align-items: center;
+    justify-items: center;
+    margin-top: 100px;
+}
+.opportunity .content {
+    display: flex;
+    flex-direction: column; /* Xếp dọc */
+    align-items: center;
+    justify-content: center;
+}
+.opportunity .content p1,p2 {
+    width: 60%;
+    color: #666;
+    font-size: 120%; /* changed from 18px */
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2%; /* changed from 20px */
+    line-height: 1.6;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.opportunity .content h2 {
+    color: #C50202;
+    font-size: 180%; /* changed from 28px */
+    font-weight: bold;
+    font-weight: 300;
+    margin-bottom: 1%; /* changed from 10px */
+}
+.opportunity .job-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%; /* khoảng cách giữa các ô */
+    padding: 2% 0;
+}
+
+.opportunity .job-item {
+    display: flex;
+    align-items: center;
+    width: 30%; /* 3 cột mỗi hàng */
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.opportunity .job-item img {
+    width: 30%;
+    height: 80%;
+    border-radius: 20%;
+    margin-right: 5%; /* changed from 15px */
+}
+.opportunity .job-info {
+    text-align: left;
+}
+.opportunity .job-title {
+    font-weight: 300;
+    width: 80%;  /* reduced from 40% to make it shorter */
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* corrected property name */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2%;
+}
+.opportunity .job-desc {
+    width: 80%;
+    color: #666;
+    font-size: 100%; /* changed from 14px */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* corrected property name */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.team-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.members-container {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    gap: 40px; /* Adjusted gap for horizontal layout */
+    margin: 0 40px;
+}
+.member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+.member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.member-info h3 {
+    margin: 0 0 5px;
+    color: #C50202;
+}
+
+.member-info p {
+    margin: 0;
+    font-weight: 600;
+    color: #666;
+}
+
+.member-info p1 {
+    color: #666;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 100%;
+}
+
+.bracket {
+    font-size: 120px;
+    color: gray;
+    font-weight: 300;
+    opacity: 0.3;
+}
+
+.bracket.left {
+    margin-right: -20px;
+}
+
+.bracket.right {
+    margin-left: -20px;
+}
+footer .container {
+    position: relative;
+    margin-bottom: 9%;
+}
+
+.footer .background {
+    z-index: 1;
+    position: absolute;
+    background: url("/CNTT/background7.png") center/contain no-repeat;
+    width: 100%;
+    aspect-ratio: 34/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.footer .background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    opacity: 90%;
+    background: linear-gradient(180deg,  #CF06DE,  #AF0036);
+    z-index: 2;
+}
+.footer h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.footer .content {
+    z-index: 3;
+    position: relative;
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Carousel optimization */
+.footer-carousel {
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 5;
+    overflow: visible !important;
+}
+
+.footer-component {
+    padding: 15px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    margin: 10px;
+    background-color: transparent;
+    transform: scale(0.9);
+    box-shadow: none; /* Loại bỏ box-shadow mặc định */
+}
+/* Active slide styles - simplified */
+.slick-center .footer-component {
+    padding: 20px 40px;
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Thêm glow effect nhẹ */
+}
+
+/* Simplified slide visibility */
+.slick-slide {
+    opacity: 0 !important;
+    transition: opacity 0.4s ease;
+    margin: 5px 0;
+}
+.slick-slide.slick-active .footer-component {
+    border-color: rgba(255, 255, 255, 0.5); /* Border rõ hơn một chút cho slide active */
+}
+.slick-center + .slick-slide .footer-component,
+.slick-slide + .slick-center .footer-component {
+    border-color: rgba(255, 255, 255, 0.4); /* Border mờ hơn một chút cho slide gần center */
+}
+/* Các slide ở xa hơn */
+.slick-slide:not(.slick-active) .footer-component {
+    border-color: rgba(255, 255, 255, 0.1); /* Border rất mờ cho slide không active */
+}
+.footer-component:hover {
+    border-color: rgba(255, 255, 255, 0.8); /* Border sáng hơn khi hover */
+}
+.slick-active {
+    opacity: 0.4 !important;
+}
+
+.slick-center {
+    opacity: 1 !important;
+}
+.info {
+    position: relative;
+    z-index: 1001;
+    background: #fff;
+    padding: 30px 20px;
+    border-top: 1px solid hsl(0, 0%, 87%);
+    text-align: center;
+}
+.info h2 {
+    color: #C50202;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+}
+.info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 300;
+}
+.info a:hover {
+    color: #C50202;
+    text-decoration: none;
+}

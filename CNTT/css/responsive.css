@@ -1,0 +1,1267 @@
+/*begin navbar mobile */
+.navbar__mobile-open i {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: black;
+  background-color: rgba(249, 247, 247, 0.2);
+  border-radius: 5px;
+}
+.navbar__mobile-open {
+  cursor: pointer;
+  position: fixed; /* Để đảm bảo nó hiển thị trên cùng */
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  padding: 10px;
+  display: none; /* Mặc định ẩn */
+  z-index: 10000; /* Đảm bảo không bị che khuất */
+}
+.navbar__mobile {
+  width: 320px;
+  max-width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 6rem;
+  opacity: 0;
+  visibility: hidden; /*anh menu nhung van trong luong*/
+  transition: all linear 0.2s;
+  box-shadow: 0 0 0 0.4rem rgba(0, 0, 0, 0.2);
+  z-index: 9999999;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar__mobile-list li {
+  margin-left: 24px;
+  list-style: none;
+}
+.navbar__mobile-list li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  padding: 1rem 0;
+}
+.navbar__mobile li a:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+}
+/* Thiết lập menu mobile */
+.navbar__mobile {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: min(20em, 100%);
+  border-left: 1px solid var(--hover-color);
+  transform: translateX(100%);
+  opacity: 1;
+  transition: all linear 0.2;
+}
+
+.navbar__mobile.show {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+}
+.overlay.show {
+  display: block;
+}
+.navbar__mobile-open,
+.navbar__mobile-close {
+  display: block;
+}
+
+/* Nút đóng menu */
+.navbar__mobile-close i {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 2rem;
+  color: black;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  cursor: pointer;
+}
+.navbar__mobile-open {
+    display: none;
+  }
+/* end  */
+@media (max-width: 992px) {
+    .navbar__mobile-open {
+        display: none;
+      }
+    .header .logo {
+        width: 30%;
+    }
+    .header .logo img {
+        padding: 0 15px;
+    }
+    .header .menu li {
+        padding: 0 10px;
+    }
+    .header .menu li a {
+        font-size: 5.5px;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-height: 700px;
+    }
+    .banner .banner__left {
+        width: 50%;
+        margin-top: 0;
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner .banner__left .name {
+        font-size: 18px;
+    }
+    .banner .banner__left .descrition {
+        font-size: 15px;
+    }
+    .banner .banner__left .btn-banner-thts {
+        font-size: 8px;
+    }
+    .banner .banner__left .btn-banner-mn{
+        font-size: 12px;
+    }
+    .banner .banner__right {
+        width: 40%;
+        top: 80px;
+    }
+    .banner .banner__right img {
+        margin-top: 35%;
+        width: 130%;
+    }
+    .about {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .left {
+        width: 150%;
+        top: 120%;
+        text-align: center;
+        transform: scale(0.4);
+        margin-left: -25%;
+    }
+    .about .left img {
+        width: 35%;
+        margin-bottom: 25%;
+        top: -2%;
+        left: 30%;
+    }
+    .about .right {
+        width: 40%;
+        text-align: left;
+        padding: 0 5px;
+        margin-top: -15%;
+    }
+    .about .right h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .about .right p {
+        font-size: 12px;
+        max-width: 120%;     
+    }
+    .about .right .btn__ctdt {
+        font-size: 16px;
+    }
+    .training .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* để responsive tốt hơn */
+        padding: 20px;
+      }
+    .training .left {
+        width: 250%;
+        object-fit: none; 
+        transform: scale(0.5);
+        top: -65%;
+        left: -98%;
+        height: 190%;
+    }
+    .training .left img {
+        width: 50%;
+        object-fit: none; 
+        margin-top: -2%;
+        left: 22%;
+        transform: scale(0.8);
+    }
+    .training .right {
+        padding: 0 10px;
+        margin-top: -35%;
+        margin-right: 25%;
+        transform: scale(0.4);
+    }
+    .training .text ul li
+    {
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-left: -28%;
+        text-align: left;
+        right: -28%;
+        padding-left: 40px;
+    }
+    .contact .background {
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+        top: -30%;
+    }
+    .contact .content {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .background {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        position: absolute;
+        top: 40;
+        z-index: -1;
+    }
+    .contact .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .opportunity .job-item {
+        width: 80%; 
+    }
+    .opportunity .job-list {
+        justify-content: start; 
+    }
+    .opportunity .job-item img {
+        width: auto; 
+        height: 60px; 
+        aspect-ratio: 1;
+    }
+    .opportunity .job-title {
+        font-size: 17px; 
+    }
+    .opportunity .job-desc {
+        width: 100%; 
+        font-size: 14px; 
+    }
+    .opportunity .container h2 {
+        font-size: 22px;
+        margin-top: -35%; 
+    }
+    .opportunity .container p1, p2 {
+        font-size: 12px; 
+    }
+    .footer .content {
+        top: 80%;
+        margin-top: 10%;
+    }
+    .footer h2 {
+        font-size: 18px;
+    }
+    .footer .footer-carousel {
+        top: -50px;
+    }
+    .footer-component {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .contact .background {
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+    }
+    .members-container {
+        align-items: center;
+        margin-top: -15%;
+    }
+    .member-info h3 {
+        font-size: 8px;
+    }
+    .member-info p {
+        font-size: 8px; 
+    }
+    .member-info p1 {
+        font-size: 8px; 
+    }
+    .member {
+        margin-bottom: 8px; 
+    }
+    .bracket {
+        display: none; 
+    }
+}
+@media (max-width: 768px) {
+    .navbar__mobile-open {
+        display: block;
+      }
+    .header .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 90%;
+        height: 100vh;
+        background: white;
+        text-align: center;
+        padding: 80px 0 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    .header .menu.active {
+        right: 0;
+    }
+    .header .menu li {
+        margin: 15px 0;
+        width: 100%;
+    }
+    .header .menu li a {
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+        color: #000;
+    }
+    .header .menu li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .header .logo {
+        width: 50%;
+    }
+    .header .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+    }
+    .header .menu-toggle.active {
+        color: #c50202;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-height: 700px;
+    }
+    .banner .banner__left {
+        width: 50%;
+        margin-top: 0;
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner .banner__left .name {
+        font-size: 20px;
+    }
+    .banner .banner__left .descrition {
+        font-size: 18px;
+    }
+    .banner .banner__left .btn-banner-thts {
+        font-size: 8px;
+    }
+    .banner .banner__left .btn-banner-mn{
+        font-size: 10px;
+    }
+    .banner .banner__right {
+        width: 40%;
+        top: 30px;
+    }
+    .banner .banner__right img {
+        margin-top: 50%;
+        width: 150%;
+    }
+    .about {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .left {
+        width: 150%;
+        margin-top: -43%;
+        text-align: center;
+        transform: scale(0.4);
+        margin-left: -25%;
+        height: 150%;
+    }
+    .about .left img {
+        width: 40%;
+        margin-bottom: 30%;
+        margin-top: 12%;
+        left: 25%;
+    }
+    .about .right {
+        width: 45%;
+        text-align: left;
+        padding: 0 5px;
+        margin-top: -15%;
+    }
+    .about .right h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .about .right p {
+        font-size: 10px;
+        max-width: 125%;     
+    }
+    .about .right .btn__ctdt {
+        font-size: 15px;
+    }
+    .training .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* để responsive tốt hơn */
+        padding: 20px;
+      }
+    .training .left {
+        width: 250%;
+        object-fit: none; 
+        transform: scale(0.4);
+        top: -30%;
+        left: -100%;
+        height: 150%;
+    }
+    .training .left img {
+        width: 50%;
+        object-fit: none; 
+        margin-top: -10%;
+        left: -20;
+        transform: scale(0.8);
+    }
+    .training .right {
+        padding: 0 10px;
+        margin-top: -10%;
+        margin-right: -20;
+        transform: scale(0.4);
+    }
+    .training .text ul li
+    {
+        font-size: 20px;
+        margin-bottom: 15px;
+        margin-left: -28%;
+        text-align: left;
+        right: -28%;
+        padding-left: 40px;
+    }
+    .contact .background {
+        width: 100%;
+        height: 110%;
+        object-fit: cover;
+        position: absolute;
+        top: 10;
+        z-index: -1;
+    }
+    .contact .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .contact .content {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .form-title {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .contact .background {
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+    }
+    .contact .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 13%;
+        justify-content: center;
+        height: 110vh;
+        padding: 50px 0;
+    }
+    .opportunity p1 h2 {
+        font-size: 20px;
+    }
+    .opportunity .job-item {
+        width: 80%; /* Full width on smaller screens */
+    }
+    .opportunity .job-list {
+        justify-content: start; /* Center items */
+    }
+    .opportunity .job-item img {
+        width: auto; /* Adjusted image size for smaller screens */
+        height: 60px; /* Adjusted image size for smaller screens */
+        aspect-ratio: 1;
+    }
+    .opportunity .job-title {
+        font-size: 15px; /* Adjusted font size for smaller screens */
+    }
+    .opportunity .job-desc {
+        width: 100%; /* Adjusted width for smaller screens */
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+    .opportunity .container h2 {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+        margin-top: -20%;
+    }
+    .opportunity .container p1, p2 {
+        font-size: 15px; /* Adjusted font size for smaller screens */
+    }
+    .footer h2 {
+        font-size: 16px;
+    }
+    .footer .footer-carousel {
+        top: -50px;
+    }
+    .footer-component {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .members-container {
+        align-items: center;
+    }
+    .member-info h3 {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+    .member-info p {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+    .member-info p1 {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+    .member {
+        margin-bottom: 10px; /* Add space between members */
+    }
+    .bracket {
+        display: none; /* Hide brackets on smaller screens */
+    }
+}
+@media (max-width: 576px) {
+    .navbar__mobile-open {
+        display: block;
+      }
+    .header .logo {
+        width: 40%;
+    }
+    .header .menu li {
+        padding: 0 5px;
+    }
+    .header .menu li a {
+        font-size: 14px;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-height: 700px;
+    }
+    .banner .banner__left {
+        width: 50%;
+        margin-top: 0;
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner .banner__left .name {
+        font-size: 12px;
+    }
+    .banner .banner__left .descrition {
+        font-size: 10px;
+    }
+    .banner .banner__left .btn-banner-thts {
+        font-size: 4px;
+    }
+    .banner .banner__left .btn-banner-mn{
+        font-size: 3px;
+    }
+    .banner .banner__right {
+        width: 42%;
+        top: 90px;
+    }
+    .about {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .left {
+        width: 150%;
+        top: 100%;
+        text-align: center;
+        transform: scale(0.3);
+        margin-left: -25%;
+    }
+    .about .left img {
+        width: 45%;
+        margin-bottom: 25%;
+        left: 25%;
+        margin-top: 19%;
+    }
+    .about .right {
+        width: 40%;
+        text-align: left;
+        padding: 0 5px;
+        margin-top: -15%;
+    }
+    .about .right h2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+        margin-top: -45%;
+    }
+    .about .right p {
+        font-size: 10px;
+        max-width: 125%;     
+    }
+    .about .right .btn__ctdt {
+        font-size: 15px;
+    }
+    .training .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* để responsive tốt hơn */
+        padding: 20px;
+      }
+    .training .left {
+        width: 250%;
+        object-fit: none; 
+        transform: scale(0.3);
+        top: -50%;
+        left: -100%;
+        height: 150%;
+    }
+    .training .left img {
+        width: 50%;
+        object-fit: none; 
+        margin-top: -5%;
+        left: -20;
+        transform: scale(0.8);
+    }
+    .training .right {
+        padding: 0 10px;
+        margin-top: -30%;
+        margin-right: 25%;
+        transform: scale(0.35);
+    }
+    .training .text ul li h2
+    {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-left: -20%;
+        text-align: left;
+        right: -50%;
+        padding-left: 20px;
+    }
+    .contact .background {
+        width: 100%;
+        height: 110%;
+        object-fit: cover;
+        position: absolute;
+        top: 10;
+        z-index: -1;
+    }
+    .contact .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .contact .content {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .form-title{
+        font-size: 12px;
+    }
+    .contact .submit-btn {
+        font-size: 8px;
+    }
+    .opportunity p1 h2 {
+        font-size: 20px;
+    }
+    .opportunity .job-item {
+        width: 80%; /* Full width on smaller screens */
+    }
+    .opportunity .job-list {
+        justify-content: start; /* Center items */
+    }
+    .opportunity .job-item img {
+        width: auto; /* Adjusted image size for smaller screens */
+        height: 60px; /* Adjusted image size for smaller screens */
+        aspect-ratio: 1;
+    }
+    .opportunity .job-title {
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+    .opportunity .job-desc {
+        width: 100%; /* Adjusted width for smaller screens */
+        font-size: 8px; /* Adjusted font size for smaller screens */
+    }
+    .opportunity .container h2 {
+        font-size: 10px; /* Adjusted font size for smaller screens */
+    }
+    .opportunity .container p1, p2 {
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+    .footer h2 {
+        font-size: 12px;
+    }
+    .footer .footer-carousel {
+        top: -50px;
+    }
+    .footer-component {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .contact .background {
+        aspect-ratio: 4/6; /* Nếu ảnh có tỉ lệ 4:3 */
+    }
+    .members-container {
+        align-items: center;
+    }
+    .member-info h3 {
+        font-size: 11px; /* Adjust font size for smaller screens */
+    }
+    .member-info p {
+        font-size: 5px; /* Adjust font size for smaller screens */
+    }
+    .member-info p1 {
+        font-size: 7px; /* Adjust font size for smaller screens */
+    }
+    .member {
+        margin-bottom: 10px; /* Add space between members */
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+    }
+    .bracket {
+        display: none; /* Hide brackets on smaller screens */
+    }
+    .contact .info p,h2{
+        margin: 5px 0;
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+@media (max-width: 660px) {
+    .navbar__mobile-open {
+        display: block;
+      }
+    .header .logo {
+        width: 50%;
+    }
+    .header .logo img {
+        padding: 0 15px;
+    }
+    .header .menu li {
+        padding: 0 10px;
+    }
+    .header .menu li a {
+        font-size: 5.5px;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-height: 700px;
+    }
+    .banner .banner__left {
+        width: 50%;
+        margin-top: 0;
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner .banner__left .name {
+        font-size: 15px;
+    }
+    .banner .banner__left .descrition {
+        font-size: 13px;
+    }
+    .banner .banner__left .btn-banner-thts {
+        font-size: 8px;
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
+    .banner .banner__left .btn-banner-mn{
+        font-size: 8px;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+    .banner .banner__right {
+        width: 45%;
+        top: 250px;
+        left: 45%;
+    }
+    .banner .banner__right img {
+        margin-top: -15%;
+        width: 130%;
+    }
+    .about {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .left {
+        width: 200%;
+        top: 110%;
+        text-align: center;
+        transform: scale(0.3);
+        margin-left: -50%;
+    }
+    .about .left img {
+        width: 35%;
+        margin-bottom: 25%;
+        top: -2%;
+        left: 28%;
+    }
+    .about .right {
+        width: 40%;
+        text-align: left;
+        padding: 0 0px;
+        margin-top: -15%;
+    }
+    .about .right h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .about .right p {
+        font-size: 10px;
+        max-width: 120%;     
+    }
+    .about .right .btn__ctdt {
+        font-size: 16px;
+    }
+    .training .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* để responsive tốt hơn */
+        padding: 20px;
+      }
+    .training .left {
+        width: 300%;
+        object-fit: none; 
+        transform: scale(0.3);
+        top: -65%;
+        left: -130%;
+        height: 190%;
+    }
+    .training .left img {
+        width: 70%;
+        object-fit: none; 
+        margin-top: -13%;
+        left: 12%;
+        transform: scale(0.9);
+    }
+    .training .right {
+        padding: 0 5px;
+        margin-top: -30%;
+        margin-right: 35%;
+        transform: scale(0.3);
+    }
+    .training .text ul li
+    {
+        font-size: 25px;
+        margin-bottom: 40px;
+        margin-left: -75%;
+        text-align: left;
+        right: -70%;
+        padding-left: 40px;
+    }
+    .contact .background {
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+        top: -30%;
+    }
+    .contact .content {
+        position: absolute;
+        top: 15%;
+        left: 45%;
+        transform: translate(0.1);
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .background {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        position: absolute;
+        top: 40;
+        z-index: -1;
+    }
+    .contact .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .contact .submit-btn {
+        font-size: 5px;
+        margin-top: 6px;
+    }
+    .contact .form-title {
+        font-size: 10px;
+    }
+    .contact .textarea-box textarea {
+        width: 100%;
+        height: 180px;
+        resize: none;
+    }
+    .contact .input-box {
+        width: 100%;
+        height: 25px;
+        margin-bottom: 15px;
+    }
+    .opportunity .job-item {
+        width: 80%; 
+    }
+    .opportunity .job-list {
+        justify-content: start; 
+    }
+    .opportunity .job-item img {
+        width: auto; 
+        height: 60px; 
+        aspect-ratio: 1;
+    }
+    .opportunity .job-title {
+        font-size: 12px; 
+    }
+    .opportunity .job-desc {
+        width: 100%; 
+        font-size: 14px; 
+    }
+    .opportunity .container h2 {
+        font-size: 15px;
+        margin-top: -50%; 
+    }
+    .opportunity .container p1, p2 {
+        font-size: 10px; 
+    }
+    .footer .content {
+        top: 80%;
+        margin-top: 10%;
+    }
+    .footer h2 {
+        font-size: 9px;
+    }
+    .footer .footer-carousel {
+        top: -50px;
+    }
+    .footer-component {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .contact .background {
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+    }
+    .members-container {
+        align-items: center;
+        margin-top: -5%;
+    }
+    .member-info h3 {
+        font-size: 4px;
+    }
+    .member-info p {
+        font-size: 4px; 
+    }
+    .member-info p1 {
+        font-size: 4px; 
+    }
+    .member {
+        margin-bottom: 4px; 
+    }
+    .bracket {
+        display: none; 
+    }
+}
+@media (max-width: 375px) {
+    .navbar__mobile-open {
+        display: block;
+      }
+    .header .logo {
+        width: 50%;
+    }
+    .header .logo img {
+        padding: 0 15px;
+    }
+    .header .menu li {
+        padding: 0 10px;
+    }
+    .header .menu li a {
+        font-size: 5.5px;
+    }
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-height: 700px;
+    }
+    .banner .banner__left {
+        width: 50%;
+        margin-top: 0;
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner .banner__left .name {
+        font-size: 8px;
+    }
+    .banner .banner__left .descrition {
+        font-size: 7px;
+    }
+    .banner .banner__left .btn-banner-thts {
+        font-size: 4px;
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
+    .banner .banner__left .btn-banner-mn{
+        font-size: 4px;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+    .banner .banner__right {
+        width: 45%;
+        top: 250px;
+        left: 45%;
+    }
+    .banner .banner__right img {
+        margin-top: 35%;
+        width: 130%;
+    }
+    .about {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .left {
+        width: 200%;
+        top: 90%;
+        text-align: center;
+        transform: scale(0.2);
+        margin-left: -50%;
+    }
+    .about .left img {
+        width: 55%;
+        margin-bottom: 25%;
+        top: -2%;
+        left: 18%;
+    }
+    .about .right {
+        width: 40%;
+        text-align: left;
+        padding: 0 0px;
+        margin-top: -15%;
+    }
+    .about .right h2 {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .about .right p {
+        font-size: 5px;
+        max-width: 120%;     
+    }
+    .about .right .btn__ctdt {
+        font-size: 16px;
+    }
+    .training .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* để responsive tốt hơn */
+        padding: 20px;
+      }
+    .training .left {
+        width: 300%;
+        object-fit: none; 
+        transform: scale(0.2);
+        top: -65%;
+        left: -125%;
+        height: 190%;
+    }
+    .training .left img {
+        width: 70%;
+        object-fit: none; 
+        margin-top: -2%;
+        left: 12%;
+        transform: scale(0.8);
+    }
+    .training .right {
+        padding: 0 5px;
+        margin-top: -47%;
+        margin-right: 35%;
+        transform: scale(0.2);
+    }
+    .training .text ul li
+    {
+        font-size: 20px;
+        margin-bottom: 40px;
+        margin-left: -75%;
+        text-align: left;
+        right: -70%;
+        padding-left: 40px;
+    }
+    .contact .background {
+        aspect-ratio: 7/6; /* Nếu ảnh có tỉ lệ 4:3 */
+        top: -30%;
+    }
+    .contact .content {
+        position: absolute;
+        top: 15%;
+        left: 45%;
+        transform: translate(0.1);
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .background {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        position: absolute;
+        top: 40;
+        z-index: -1;
+    }
+    .contact .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .contact .submit-btn {
+        font-size: 5px;
+        margin-top: 6px;
+    }
+    .contact .form-title {
+        font-size: 10px;
+    }
+    .contact .textarea-box textarea {
+        width: 100%;
+        height: 180px;
+        resize: none;
+    }
+    .contact .input-box {
+        width: 100%;
+        height: 25px;
+        margin-bottom: 15px;
+    }
+    .opportunity .job-item {
+        width: 80%; 
+    }
+    .opportunity .job-list {
+        justify-content: start; 
+    }
+    .opportunity .job-item img {
+        width: auto; 
+        height: 60px; 
+        aspect-ratio: 1;
+    }
+    .opportunity .job-title {
+        font-size: 12px; 
+    }
+    .opportunity .job-desc {
+        width: 100%; 
+        font-size: 14px; 
+    }
+    .opportunity .container h2 {
+        font-size: 15px;
+        margin-top: -50%; 
+    }
+    .opportunity .container p1, p2 {
+        font-size: 10px; 
+    }
+    .footer .content {
+        top: 80%;
+        margin-top: 10%;
+    }
+    .footer h2 {
+        font-size: 9px;
+    }
+    .footer .footer-carousel {
+        top: -60px;
+    }
+    .footer-component {
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .contact .background {
+        aspect-ratio: 9/6; /* Nếu ảnh có tỉ lệ 4:3 */
+    }
+    .members-container {
+        align-items: center;
+        margin-top: -5%;
+    }
+    .member-info h3 {
+        font-size: 4px;
+    }
+    .member-info p {
+        font-size: 4px; 
+    }
+    .member-info p1 {
+        font-size: 4px; 
+    }
+    .member {
+        margin-bottom: 4px; 
+    }
+    .bracket {
+        display: none; 
+    }
+}

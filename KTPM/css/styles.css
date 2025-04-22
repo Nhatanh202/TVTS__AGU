@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+.profile {
+    text-align: center;
+}
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.profile a {
+    text-decoration: none;
+    color: #012A9C;
+    font-weight: bold;
+}
+.footer  h2{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #012A9C;
+}

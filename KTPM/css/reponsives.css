@@ -1,0 +1,97 @@
+     .header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .header .logo {
+        font-size: 24px;
+    }
+    
+    .header .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .header .menu ul li {
+        margin: 0 10px;
+    }
+    
+    .header .menu ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .profile img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    @media screen and (max-width: 638px) {
+        body {
+            font-size: 14px;
+        }
+        .header .logo {
+            font-size: 20px;
+            padding-right: 50px;
+        }
+        .header .menu ul {
+            flex-direction: column;
+        }
+        .container {
+            padding: 10px;
+        }
+        .profile img {
+            width: 80px;
+        }
+        .btn {
+            font-size: 14px;
+    }
+    
+    @media screen and (max-width: 480px) {
+        body {
+            font-size: 12px;
+        }
+        .header .logo {
+            font-size: 18px;
+        }
+        .header .menu ul {
+            flex-direction: column;
+        }
+        .container {
+            padding: 5px;
+        }
+        .profile img {
+            width: 60px;
+        }
+        .btn {
+            font-size: 12px;
+        }
+    }
+}
+
+
+    
+    

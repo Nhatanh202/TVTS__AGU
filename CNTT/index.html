@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!-- Slick slider -->
+    <link rel="stylesheet" href="/CNTT/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="/CNTT/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/CNTT/slick-1.8.1/slick/slick.min.js"></script>
+    <!-- End slick -->
+
+    <!-- JS -->
+    <script src="/CNTT/js/script.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CNTT/css/styles.css">
+    <link rel="stylesheet" href="/CNTT/css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- WEB BAR -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo_phongctsv.png">
+            </a>
+        </div>
+        <!-- Nút mở menu trên mobile -->
+       <!-- begin mobile -->
+            <!-- Nút mở menu mobile -->
+            <div class="  navbar__mobile-open" onclick="openSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- Menu Mobile -->
+            <nav class="navbar__mobile">
+                <div class="navbar__mobile-close" onclick="closeSidebar()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul class="navbar__mobile-list">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="#about">Giới Thiệu</a></li>
+                    <li><a href="#training">Mục tiêu đào tạo</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Overlay -->
+            <div class="overlay"></div>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Giới thiệu</a></li>
+            <li><a href="about.html">Mục tiêu đào tạo</a></li>
+            <li><a href="services.html">Tố chất phù hợp</a></li>
+            <li><a href="contact.html">Cơ hội việc làm</a></li>
+    </ul>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__left">
+                <h1 class="name">NGÀNH CÔNG NGHỆ THÔNG TIN</h1> 
+                <p class="descrition">Khoa Công nghệ Thông tin</p> 
+                <button class="btn-banner-thts">TỔ HỢP TUYỂN SINH: A01, B01, C01, A00, B00, C00, D01, D00</button>
+                <button class="btn-banner-mn">MÃ NGÀNH 7480103</button>
+            </div>
+            <div class="banner__right">
+                <img src="logo.png" alt="">
+            </div>
+        </div>  
+    </section>
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="container">
+            <div class="about__left"></div>
+        </div>
+        <div class="background"></div>
+        <div class="left">
+            <img src="logo2.png" alt="">    
+        </div>
+        <div class="right">
+            <h2>GIỚI THIỆU <br> NGÀNH "CÔNG NGHỆ THÔNG TIN"</h2>
+            <p>
+            Ngành Công nghệ thông tin cung cấp kiến thức và kỹ năng phát triển, vận hành và quản lý các ứng dụng công nghệ thông tin; trang bị năng lực tham mưu, tư vấn và tổ chức thực hiện nhiệm vụ của một chuyên viên trong lĩnh vực CNTT.
+            </p>
+        </div>
+    </section>
+    <!-- TRAINING -->
+    <section class="training">
+        <div class="container">
+            <div class="background"></div>
+            <div class="right">
+                <div class="text">
+                    <h2>Mục tiêu đào tạo</h2>
+                    <ul>
+                        <li>Đào tạo cử nhân Công nghệ thông tin có kiến thức cơ bản, cơ sở và chuyên ngành thuộc lĩnh vực công nghệ thông tin;</li>
+                        <li>Trang bị cho sinh viên năng lực tham mưu, tư vấn và có khả năng tổ chức thực hiện nhiệm vụ với tư cách của một chuyên viên trong lĩnh vực CNTT.</li>
+                        <li>Trang bị cho sinh viên kiến thức về quy trình xây dựng, quản lý và bảo trì hệ thống phần mềm; có khả năng phân tích, thiết kế và quản lý các dự án phần mềm; có khả năng bảo trì, quản lý các hệ thống mạng máy tính và truyền thông.</li>
+                    </ul>
+                    <button class="btn__ctdt">CHƯƠNG TRÌNH ĐÀO TẠO</button>
+                </div>
+            </div>
+                <div class="left">
+                    <img src="logo1.png" alt="">
+                </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact">
+    <div class="container">
+        <div class="background">
+            <img src="background6.png" alt="">
+        </div>
+        <div class="content">
+            <i class="fa-solid fa-headset"></i>
+            <div class="form-container">
+                <h2 class="form-title">ĐĂNG KÝ TƯ VẤN</h2>
+                <form>
+                    <div class="form-group">
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Họ và Tên">
+                        </div>
+                        <div class="input-box">
+                            <input type="email" class="input-field" placeholder="Email">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Số điện thoại">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" class="input-field" placeholder="Tên Trường cấp 3">
+                        </div>
+                        <div class="textarea-box">
+                            <textarea class="input-field" placeholder="Nội dung muốn tư vấn"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">GỬI YÊU CẦU TƯ VẤN</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </section>
+        <!-- OPPORTUNITY -->
+        <section class="opportunity">
+        <div class="container">
+            <div class="content">
+                <h2>CƠ HỘI NGHỀ NGHIỆP</h2>
+                <p1>Khi học ngành công nghệ thông tin, sau khi ra trường bạn có thể xin việc trong các ngành nghề sau</p1>
+                <div class="job-list">
+                    <div class="job-item">
+                        <img src="CV_CNTT.png" alt="">
+                        <div class="job-info">
+                            <div class="job-title">Chuyên viên CNTT</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                
+                    <div class="job-item">
+                        <img src="CV_QTM.png" alt="">
+                        <div class="job-info">
+                            <div class="job-title">Chuyên viên quản trị mạng</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                
+                    <div class="job-item">
+                        <img src="Coder.png" alt="">
+                        <div class="job-info">
+                            <div class="job-title">Lập trình viên (Coder)</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                
+                    <div class="job-item">
+                        <img src="QT_Website.png" alt="">
+                        <div class="job-info">
+                            <div class="job-title">Quản trị website</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                
+                    <div class="job-item">
+                        <img src="QT_CSDL.png" alt="">
+                        <div class="job-info">
+                            <div class="job-title">Quản trị cơ sở dữ liệu</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                
+                    <div class="job-item">
+                        <img src="GV_CNTT.png" alt="">
+                        <div class="job-info">
+                            <div class="job-title">Giáo viên giảng dạy CNTT</div>
+                            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p2>Ngoài ra bạn cũng có thể tiếp tục học sau đại học chuyên ngành Công nghệ Thông tin tại Trường Đại học An Giang để tiếp tục nâng cao kiến thức chuyên môn và mở ra nhiều cơ hội nghề nghiệp trong tương lai</p2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="container">
+            <div class="background"></div>
+                <div class="content">
+                    <h2>NHỮNG TỐ CHẤT PHÙ HỢP VỚI NGÀNH CÔNG NGHỆ THÔNG TIN</h2>
+                <div class="footer-carousel">
+                    <div class="footer-component">Có trí thông minh và khả năng sáng tạo</div>
+                    <div class="footer-component">Nhanh nhẹn, nhạy bén và có khả năng tư duy tốt</div>
+                    <div class="footer-component">Ham học hỏi và cập nhật kiến thức mới liên tục</div>
+                    <div class="footer-component">Chịu áp lực tốt và kiên trì</div>
+                    <div class="footer-component">Khả năng làm việc nhóm và giao tiếp tốt</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section">
+        <div class="bracket left">{{</div>
+        <div class="members-container">
+            <div class="member">
+                <img src="El1.png" alt="Lâm Tâm Thiện">
+                <div class="member-info">
+                    <h3>Lâm Tâm Thiện</h3>
+                    <p>Khóa 8</p>
+                    <p1>Giám đốc kỹ thuật</p1>
+                </div>
+            </div>
+        <div class="member">
+            <img src="El2.png" alt="Phùng Thụy Đào">
+            <div class="member-info">
+                <h3>Phùng Thụy Đào</h3>
+                <p>Khóa 10</p>
+                <p1>Kiểm thử phần mềm</p1>
+            </div>
+        </div>
+        <div class="member">
+            <img src="El3.png" alt="Đỗ Phương Trâm">
+            <div class="member-info">
+                    <h3>Đỗ Phương Trâm</h3>
+                    <p>Khóa 9</p>
+                    <p1>Kỹ sư cầu nối - TMA</p1>
+            </div>
+        </div>
+        <div class="bracket right">}}</div>
+    </section>
+    <!-- CONTACT -->
+    <section class="info">
+        <h2>TRƯỜNG ĐẠI HỌC AN GIANG</h2>
+        <p>18 Ung Văn Khiêm, P. Mỹ Xuyên, TP. Long Xuyên, An Giang</p>
+        <p><i class="fa-solid fa-phone"></i> 0794 2222 45   <i class="fa-solid fa-globe"></i> <a href="https://agu.edu.vn/tuyensinh">agu.edu.vn/tuyensinh</a>   <i class="fa-solid fa-envelope"></i> <a href="mailto:tuyensinh@agu.edu.vn">tuyensinh@agu.edu.vn</a></p>
+        <p>Facebook: <a href="https://fb.com/tuyensinhdhag">fb.com/tuyensinhdhag</a> - Zalo: <a href="https://vnu.app/agu-tvts-01">vnu.app/agu-tvts-01</a> - Zalo: <a href="https://vnu.app/agu-tvts-02">vnu.app/agu-tvts-02</p>
+    </section>
+</header>
+</body>
+</html>
